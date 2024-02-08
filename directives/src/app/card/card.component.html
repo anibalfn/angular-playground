@@ -1,0 +1,36 @@
+<h1>Hello, world!</h1>
+<button>Click here for wasting your time</button>
+
+<ul>
+  <li *ngFor="let p of products; let i = index" (click)="remove(i)">
+    {{ i }} - {{ p }}
+  </li>
+  <button (click)="add()">Add</button>
+</ul>
+
+<div [ngSwitch]="menuType">
+  <div *ngSwitchCase="'user'">
+    <ul>
+      <li>Change Profile</li>
+      <li>Add card</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'admin'">
+    <ul>
+      <li>Change profile</li>
+      <li>Add card</li>
+      <li>Manage users</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'sudo'">
+    <ul>
+      <li>Change profile</li>
+      <li>Add card</li>
+      <li>Manage users</li>
+      <li>Manage admins</li>
+    </ul>
+  </div>
+</div>
+
+<p>card works!</p>
+<!-- ngIf -> boolean condition -->

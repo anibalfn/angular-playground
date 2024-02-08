@@ -1,0 +1,11 @@
+<app-attributes>
+  <h2>AAAAAAAAAAAAAAA</h2>
+</app-attributes>
+
+<app-card *ngIf="isAliveCard; else hiddenBlock"></app-card>
+
+<ng-template #hiddenBlock>
+  <p>I 'M A HIDDEN LINE!!!!!</p>
+</ng-template>
+
+<router-outlet />

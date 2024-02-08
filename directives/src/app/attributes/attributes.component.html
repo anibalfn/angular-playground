@@ -1,0 +1,24 @@
+<p [ngClass]="cssStyle">attributes works!</p>
+
+<button (click)="change()">Ativar / Desativar</button>
+
+<h1 [ngStyle]="{ background: backColor, color: fontColor }">WHY ANGULAR?</h1>
+
+<ng-content select="h2"></ng-content>
+
+<h2>Shop List</h2>
+Add a item: <input type="text" [(ngModel)]="item" />
+<button (click)="addList()">Add to list</button>
+<p>{{ item }}</p>
+
+<ul>
+  <li *ngFor="let elementList of list">{{ elementList }}</li>
+</ul>
+
+<ng-template [ngIf]="isEnabled">
+  <a href="http://github.com/anibalfn">My Github</a>
+</ng-template>
+<hr>
+<ng-template [ngIf]="true">
+  <a href="http://linked.in/in/anibalfn">My LinkedIn</a>
+</ng-template>
